@@ -1,0 +1,189 @@
+ :root {
+  --bg: #ccc;
+  --text: #222;
+  --primary:#c59337;
+  --secondary: #8f94fb;
+  --card-bg: #f5f5fa;
+}
+
+body.dark {
+  --bg: #1c1c2b;
+  --text: #f4f4f4;
+  --primary: #c59337;
+  --secondary: #ff7eb3;
+  --card-bg: #2b2c3b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--primary);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid #fff;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  margin: 0.3rem 0;
+}
+
+.hero-section p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills-list li {
+  background: var(--card-bg);
+  padding: 0.5rem 0.9rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Projects */
+.project-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* Resume & Contact */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+button {
+  padding: 0rem 1.2rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
