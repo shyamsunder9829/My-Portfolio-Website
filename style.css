@@ -1,4 +1,4 @@
- :root {
+  :root {
   --bg: #ccc;
   --text: #222;
   --primary:#c59337;
@@ -20,6 +20,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: all 0.3s ease-in-out;
+  line-height: 1.6;
 }
 
 /* Navbar */
@@ -33,6 +34,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .nav-links {
@@ -41,6 +43,7 @@ body {
   gap: 1.2rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .nav-links li a {
@@ -123,6 +126,7 @@ h2 {
   padding: 0.5rem 0.9rem;
   border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--primary);
 }
 
 /* Projects */
@@ -185,5 +189,46 @@ footer {
   padding: 1.5rem;
   background: var(--card-bg);
   font-weight: 500;
+  color: var(--text);
   font-size: 0.95rem;
 }
+@media (max-width:768px) {
+   .navbar{
+flex-direction: column;
+align-items: flex-start;
+   }
+   .nav-links{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+   }
+   .hero-section{
+    padding: 2rem 1rem;
+   }
+   .hero-section h2 {
+    font-size: 1.5rem;
+   }
+   section {
+    padding: 1.5rem 1rem;
+   }
+   h2{
+    font-size: 1.4rem;
+   }
+  .skills-list li,
+   .project-card,
+   form input,
+   form textarea,
+   button{
+    font-size: 0.95rem;
+   }
+}
+@media (max-width: 480px) {
+    .hero-photo{
+        width: 120px;
+        height: 120px;
+    }
+    .nav-links li a {
+        font-size: 0.95rem;
+    }
+}
+    
